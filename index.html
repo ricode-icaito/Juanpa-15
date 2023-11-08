@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Formularios-JuanpaGeek</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="img/favicon.png">
+  </head>
+  <body>
+     <script src="script.js"></script>
+    <h1>Clase No.15 Curso HTML-CSS-JS</h1>
+    <p>HTML5 -> Formularios</p>
+    <section>
+      <!-- name identifica el nombre del formulario, ,method indica que los datos se incluiran en la URL (GET) y action declara que procesar.php es el archivo que se ejecutará en el servidor para procesar la información y devolver el resultado. -->
+      <form name="formulario" method="get" action="procesar.php">
+        <p><input type="text" name="nombre"></p>
+        <p><input type="text" name="edad"></p>
+        <p><input type="submit" value="Enviar Datos"></p>  <!-- valor del value se ve en el boton -->
+      </form>
+    </section>  <br><br>
+
+<!-- en esta sección usar en edad: value="35" demostrar valores predeterminados en los campos del formulario. -->
+
+<!-- incorporemos el uso de label para indicarle al usuario que debe ingresar en cada campo -->
+    <section>
+    <form name="formulario" method="get" action="procesar.php">
+       <p><label>Nombre: <input type="text" name="nombre"></label></p> 
+       <p><label>Edad: <input type="text" name="edad"></label></p>
+       <p><input type="submit" value="Enviar Datos"></p>
+</form>
+    </section>  <br><br> 
+
+<!-- seguimos demostrando el uso de label cambiar las lineas -->
+    <section>
+      <form name="formulario" method="get" action="procesar.php">
+       <p><label for="nombre">Nombre: </label>
+       <input type="text" name="nombre" id="nombre"></label></p>
+       <p><label for="edad">Edad: </label>
+       <input type="text" name="edad" id="edad"></label></p>
+       <p><input type="submit" value="Enviar"></p>
+      </form>
+    </section>  <br><br> 
+
+<!-- Regresar a PowerPoint -->
+
+<section>
+    <form name="formulario" method="get" action="procesar.php">
+       <p><label>Nombre: <input type="text" name="nombre" maxlength="15"> </label></p>
+       <p><label>Edad: <input type="text" name="edad"></label></p>
+       <p><input type="submit" value="Enviar"></p>
+    </form>       
+</section>  <br><br> 
+<!-- En este ejemplo aún el campo de edad puede recibir valor texto en el campo, solo hemos delimitado el campo nombre a 15 caracteres -->
+
+<section>
+    <form name="formulario" method="get" action="procesar.php">
+       <p><label>Nombre: <input type="text" name="nombre" maxlength="15"> </label></p>
+       <p><label>Edad: <input type="number" name="edad"></label></p>
+       <p><label>Correo: <input type="email" name="correo"></label></p>
+       <p><label>Teléfono: <input type="tel" name="telefono"></label></p>
+       <p><label>Sitio Web: <input type="url" name="edad"></label></p>
+       <p><input type="submit" value="Enviar"></p>
+    </form>       
+</section>   <br><br>
+<!-- podemos ver el campo edad ahora es numerico y permite el ingreso unico de numeros, el campo email y url funcionan igual la diferencia solo hasta que se valide el envio, number si verifica antes como propiedad del elemento. -->
+
+<!-- Regresar a PowerPoint -->
+
+<!-- podemos aún delimitar el rango en los campos number indicandole que queremos un rando de 13 a 100 -->
+<section>
+    <form name="formulario" method="get" action="procesar.php">
+       <p><label>Nombre: <input type="text" name="nombre" maxlength="15"> </label></p>
+       <p><label>Edad: <input type="number" name="edad" min="13" max="100"></label></p>
+       <p><label>Correo: <input type="email" name="correo"></label></p>
+       <p><label>Teléfono: <input type="tel" name="telefono"></label></p>
+       <p><label>Sitio Web: <input type="url" name="edad"></label></p>
+       <p><input type="submit" value="Enviar"></p>
+    </form>       
+</section>   <br><br>
+
+<!-- Regresar a PowerPoint -->
+
+<section>
+    <form name="formulario" method="get" action="procesar.php">
+       <p><label>Nombre: <input type="text" name="nombre" maxlength="15"> </label></p>
+       <p><label>Edad: <input type="range" name="edad" min="13" max="100" value="35"></label></p>
+       <p><label>Correo: <input type="email" name="correo"></label></p>
+       <p><label>Teléfono: <input type="tel" name="telefono"></label></p>
+       <p><label>Sitio Web: <input type="url" name="edad"></label></p>
+       <p><input type="submit" value="Enviar"></p>
+    </form>       
+</section>   <br><br>
+
+<!-- Regresar a PowerPoint -->
+<section>
+    <form name="formulario" method="get" action="procesar.php">
+       <p><label>Nombre: <input type="text" name="nombre" maxlength="15"> </label></p>
+       <p><label>Edad: <input type="radio" name="edad" value="15" checked>15 a 29 Años</label></p>
+       <p><label>Edad: <input type="radio" name="edad" value="30">30 a 44 Años</label></p> 
+       <p><label>Edad: <input type="radio" name="edad" value="45">45 a 59 Años</label></p>
+       <p><label>Edad: <input type="radio" name="edad" value="60">60 Años en adelante</label></p>
+       <p><input type="submit" value="Enviar"></p>
+    </form>       
+</section><br><br>
+<!-- hemos declarado 4 elementos, como todos los elementos tienen el mismo nombre (edad) se consideran parte del mismo grupo y por lo tanto solo una de las opciones puede ser seleccionada a la vez. vemos el uso del metodo checked en el valor de 15 años, hace que salga seleccionada esa opción predeterminada -->
+
+<!-- Regresar a PowerPoint -->
+<section>
+    <form name="formulario" method="get" action="procesar.php">
+       <p><label>Nombre: <input type="text" name="nombre" maxlength="15"> </label></p>
+       <p><label>Edad: <input type="checkbox" name="edad" value="15" checked>15 Años</label></p>
+       <p><label>Edad: <input type="checkbox" name="edad" value="30" checked>30 Años</label></p> 
+       <p><label>Edad: <input type="checkbox" name="edad" value="45">45 Años</label></p>
+       <p><label>Edad: <input type="checkbox" name="edad" value="60">60 Años</label></p>
+       <p><input type="submit" value="Enviar"></p>
+    </form>       
+</section><br><br>
+
+<!-- Regresar a PowerPoint -->
+
+<section>
+    <form name="formulario" method="get" action="procesar.php">
+      <p><input type="date" name="fecha" value="2022-02-06"></P>
+      <p><input type="submit" value="Enviar Fecha"></p>
+    </form>
+</section><br><br>
+
+<!-- Regresar a PowerPoint -->
+
+<section>
+    <form name="formulario" method="get" action="procesar.php">
+      <p><input type="color" name="micolor" value="#99BB00"></p>
+      <p><input type="submit" value="Enviar Color"></p>
+    </form>
+</section><br><br>
+
+<!-- Regresar a PowerPoint -->
+
+<section>
+    <form name="formulario" method="get" action="procesar.php">
+       <p><label>Nombre: <input type="text" name="nombre" maxlength="15"> </label></p>
+       <p><label>Edad: <input type="number" name="edad" min="13" max="100"></label></p>
+       <p><input type="image" src="Enviar_boton.png" width="100"></p>
+    </form>
+</section><br><br>
+
+<!-- Regresar a PowerPoint -->
+<section>
+    <form name="formulario" method="get" action="procesar.php">
+       <p><label>Nombre: <input type="text" name="nombre" maxlength="15"> </label></p>
+       <p><label>Edad: <input type="number" name="edad" min="13" max="100"></label></p>
+       <p><button type="submit">Enviar Formulario</button></p>
+    </form>
+</section><br><br>
+
+<!-- Regresar a PowerPoint -->
+
+<section>
+    <form name="formulario" method="get" action="procesar.php">
+       <p><label>Texto: <textarea name="texto" cols="50" rows="6"></textarea></label></p>
+       <p><button type="submit">Enviar Formulario</button></p>
+    </form>
+</section><br><br>
+
+<!-- Regresar a PowerPoint -->
+
+<section>
+    <form name="formulario" method="get" action="procesar.php">
+       <p>
+         <label for="listado">Libros: </label>
+         <select name="libro" id="listado">
+           <option value="1">El Señor de los Anillos</option>
+           <option value="2">Aliens</option>
+           <option value="3">Crimen y Castigo</option>
+           <option value="4">Romeo & Julieta</option>
+         </select>
+       </p>   
+           <p><input type="submit" value="Enviar"></p>
+    </form>
+</section><br><br>
+
+<!-- Regresar a PowerPoint -->
+
+<section>
+    <form name="formulario" method="get" action="procesar.php">
+      <datalist id="datos">
+        <option value="123123123" label="Teléfono 1">
+        <option value="456456456" label="Teléfono 2">
+      </datalist>
+      <p><label>Teléfono: <input type="tel" name="telefono" list="datos"></label></p>
+      <p><input type="submit"  value="Enviar ahora"></p>
+    </form>
+</section><br><br>
+
+<!-- Regresar a PowerPoint -->
+
+<section>
+    <form name="formulario" method="get" action="procesar.php">
+      <progress value="30" max="100">0%</progress>
+    </form>
+</section><br><br>
+
+<section>
+    <form name="formulario" method="get" action="procesar.php">
+      <meter value="60" min="0" max="100" low="40" high="80" optimum="100">60</meter>
+    </form>
+</section>
+</body>
+</html>
